@@ -1,11 +1,19 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container, Button, ButtonGroup} from 'react-bootstrap';
 import './Navbar.scss';
+import logo from '../assets/logo.svg';
 
 const Navigation = () => (
-    <Navbar bg="light" expand="lg">
-        <Container fluid>
-            <Navbar.Brand href="#">MAGBANK</Navbar.Brand>
+    <Navbar variant="dark" expand="lg">
+        <Container>
+            <Navbar.Brand href="#">
+                <img
+                    src={logo}
+                    height="30"
+                    className="d-inline-block align-top"
+                    alt="MagBank logo"
+                />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav className="mr-auto">
@@ -14,7 +22,7 @@ const Navigation = () => (
                     <Nav.Link href="#faq">FAQ</Nav.Link>
                 </Nav>
                 <ButtonGroup aria-label="Basic example">
-                    <Button variant="outline-secondary">
+                    <Button variant="outline-light">
                         <NavDropdown title="Acessar minha conta" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
@@ -27,7 +35,7 @@ const Navigation = () => (
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Button>
-                    <Button variant="outline-secondary">abra sua conta</Button>
+                    <Button variant="outline-light">abra sua conta</Button>
                 </ButtonGroup>
             </Navbar.Collapse>
         </Container>
