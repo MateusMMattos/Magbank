@@ -1,9 +1,11 @@
 import Navbar from './components/Navbar.js'
 import Hero from './components/Hero.js';
 import CreditCard from './components/CreditCard.js';
-// import CardList from './components/CardList.js';
-// import CenteredButton from './components/CenteredButton.js';
+import CardList from './components/CardList.js';
+import CenteredButton from './components/CenteredButton.js';
 import './App.scss';
+
+import posts from './data/posts';
 
 const App = () => {
   return (
@@ -11,6 +13,8 @@ const App = () => {
       <Navbar />
       <Hero />
       <CreditCard />
+      <CardList posts={posts} />
+      <CenteredButton>Abra sua conta</CenteredButton>
     </div>
   );
 }
