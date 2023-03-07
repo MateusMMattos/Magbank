@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown, Container, Button, ButtonGroup} from 'react-b
 import './Navbar.scss';
 import logo from '../assets/logo.svg';
 
-const Navigation = () => (
+const Navigation = ({handCreateAcc}) => (
     <Navbar variant="dark" expand="lg">
         <Container>
             <Navbar.Brand href="#">
@@ -35,7 +35,7 @@ const Navigation = () => (
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Button>
-                    <Button variant="outline-light">abra sua conta</Button>
+                    <Button variant="outline-light" onClick={handCreateAcc}>abra sua conta</Button>
                 </ButtonGroup>
             </Navbar.Collapse>
         </Container>
